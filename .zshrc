@@ -6,13 +6,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/$USER/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
-zstyle ':completion:*' menu select=2 					# Activa menú interactivo para tabular entre opciones
+zstyle ':completion:*' menu select=2 				# Activa menú interactivo para tabular entre opciones
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'		# Case-insensitive nativo
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"	# Colores en completado
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"		# Colores en completado
 
 # End of lines added by compinstall
 

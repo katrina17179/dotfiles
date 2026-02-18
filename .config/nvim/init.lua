@@ -32,3 +32,21 @@ vim.opt.signcolumn = "yes"
 -- =========================================================
 --                          MAPEOS
 -- =========================================================
+
+
+-- =========================================================
+--                          AUTOCMD
+-- =========================================================
+
+local default = vim.api.nvim_create_augroup("Default", { clear = true })
+local createcmd = vim.api.nvim_create_autocmd
+
+createcmd("BufEnter", {
+		group = default,
+		pattern = "*.md",
+		callback = function()
+				vim.opt_local.spell = true
+		end,
+})
+
+
